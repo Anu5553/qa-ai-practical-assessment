@@ -8,12 +8,20 @@
 
 - **Prompt:** Scaffold PrismStructure for Toolshop only: package.json, playwright.config.js, UI pageobjects with POManager, API pageobjects/helpers, tests/UI Test and tests/API Test skeletons with @Smoke/@Regression IDs, execution-reports folder. Follow existing Prism patterns. No full test logic yet — use test.skip placeholders.
 - **AI Response Summary:** Created PrismStructure with UI pages (login, register, home, product, cart, checkout, account), POManager, API auth/cart/products/invoice stubs, apiHelper, dynamic user helper, smoke/regression spec skeletons, env example, smoke/regression npm scripts.
-- **Debugging Outcome:** Structure-only pass. Locators are provisional (`data-test` first) and will be refined when implementing Steps 6–9 against the live UI. Invoice double-confirm helper stubbed on checkoutPage for AC2.
+- **Debugging Outcome:** Structure-only pass. Locators are provisional (`data-test` first) and refined in later steps against the live UI. Invoice double-confirm helper stubbed on checkoutPage for AC2.
 
 ---
 
 ## Entry 2
 
-- **Prompt:** _To be added when implementing UI Smoke (Step 6)._
+- **Prompt:** Implement UI Smoke TC-UI-01..05 only. Use live `data-test` selectors. Register → login → browse in-stock product → add to cart + qty → COD checkout with confirm twice → My Invoices. Keep serial mode.
+- **AI Response Summary:** Implemented page objects and `01_smokeUITest.spec.js` with serial shared user; unique email factory; wait for `/carts` response + toast on add-to-cart.
+- **Debugging Outcome:** First fail — cart empty because add-to-cart raced before API finished; fixed with response+toast wait. Second fail — billing `proceed-3` disabled (house number empty / Albania lookup); switched to Netherlands `1111AA` + house `1`. Third fail — invoice missing after one confirm path; confirmed assignment rule: first Confirm → “Payment was successful”, second Confirm → invoice + “Thanks for your order”. All 5 UI Smoke tests passed.
+
+---
+
+## Entry 3
+
+- **Prompt:** _To be added when implementing UI Regression (Step 7)._
 - **AI Response Summary:** _To be added._
 - **Debugging Outcome:** _To be added._

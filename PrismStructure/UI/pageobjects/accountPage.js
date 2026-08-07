@@ -1,18 +1,25 @@
 class accountPage {
   constructor(page) {
     this.page = page;
-    this.profileNav = page.locator('[data-test="nav-menu"], [data-test="nav-my-account"], a[href*="account"]').first();
-    this.invoicesNav = page.locator('[data-test="nav-my-invoices"], a[href*="invoices"]').first();
+    this.navMenu = page.locator('[data-test="nav-menu"]');
+    this.profileNav = page.locator('[data-test="nav-my-profile"]');
+    this.invoicesNav = page.locator('[data-test="nav-my-invoices"]');
+    this.invoiceRows = page.locator("table tbody tr");
   }
 
   async openProfile() {
-    // Implemented in Step 7
+    await this.navMenu.click();
     await this.profileNav.click();
   }
 
   async openMyInvoices() {
-    // Implemented in Step 6
+    await this.navMenu.click();
     await this.invoicesNav.click();
+    await this.page.waitForURL("**/invoices**", { timeout: 15000 });
+  }
+
+  async expectAtLeastOneInvoice() {
+    await this.invoiceRows.first().waitFor({ state: "visible", timeout: 20000 });
   }
 }
 

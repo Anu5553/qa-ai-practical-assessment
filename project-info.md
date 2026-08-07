@@ -108,7 +108,7 @@ Chose Playwright Prism-style layout under `PrismStructure/` (UI pageobjects + PO
 
 ### 6. How you validate and refine AI-generated test cases and scripts
 
-_To be completed as cases and scripts are produced._
+Run Playwright locally after each implementation batch. Do not accept AI selectors until verified on live Toolshop (`data-test` dump / failing screenshot). Refine from failures: cart race → wait for `/carts` + toast; billing disabled → valid NL postcode lookup; invoice missing → enforce double Confirm (payment success then invoice). Keep AI output only after green `@Smoke` run. Prompt/debug notes: `ai-prompts/automation-and-debugging.md`.
 
 ### 7. How you use AI for test data generation, environment assumptions, and API payloads
 

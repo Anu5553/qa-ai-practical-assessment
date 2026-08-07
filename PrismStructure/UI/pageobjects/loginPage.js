@@ -1,9 +1,11 @@
 class loginPage {
   constructor(page) {
     this.page = page;
-    this.emailInput = page.locator('[data-test="email"], input[id="email"], input[type="email"]').first();
-    this.passwordInput = page.locator('[data-test="password"], input[id="password"], input[type="password"]').first();
-    this.loginButton = page.locator('[data-test="login-submit"], input[type="submit"], button[type="submit"]').first();
+    this.emailInput = page.locator('[data-test="email"]');
+    this.passwordInput = page.locator('[data-test="password"]');
+    this.loginButton = page.locator('[data-test="login-submit"]');
+    this.loginError = page.locator('[data-test="login-error"]');
+    this.navMenu = page.locator('[data-test="nav-menu"]');
   }
 
   async goto() {
@@ -11,10 +13,10 @@ class loginPage {
   }
 
   async login(email, password) {
-    // Implemented in Step 6
     await this.emailInput.fill(email);
     await this.passwordInput.fill(password);
     await this.loginButton.click();
+    await this.navMenu.waitFor({ state: "visible", timeout: 20000 });
   }
 }
 
