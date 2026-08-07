@@ -30,6 +30,14 @@
 
 ## Entry 4
 
-- **Prompt:** _To be added when implementing API Smoke (Step 8)._
+- **Prompt:** Implement API Smoke TC-API-01..06: register, login token, create cart, products+add, verify cart, COD invoice. Use assignment invoice fields; keep serial shared state.
+- **AI Response Summary:** Updated dynamic user/invoice helpers and API pageobjects; implemented serial `01_smokeAPITest.spec.js` with bearer auth chaining.
+- **Debugging Outcome:** Flat US billing failed country validation; NL address matching register (`Verhoevenstraat` / `1111AA`) plus `/payment/check` before `/invoices` succeeded. All 6 API Smoke tests passed.
+
+---
+
+## Entry 5
+
+- **Prompt:** _To be added when implementing API Regression (Step 9)._
 - **AI Response Summary:** _To be added._
 - **Debugging Outcome:** _To be added._

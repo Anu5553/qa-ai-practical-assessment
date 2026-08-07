@@ -4,6 +4,7 @@ const cartApi = {
     Accept: "application/json",
     "Content-Type": "application/json",
   },
+  cartById: (cartId) => `/carts/${cartId}`,
 };
 
 module.exports = cartApi;
