@@ -46,6 +46,6 @@
 
 ## Entry 6
 
-- **Prompt:** _To be added in documentation phase (Step 10)._
-- **AI Response Summary:** _To be added._
-- **Debugging Outcome:** _To be added._
+- **Prompt:** Finalize README and project-info for submission; document where reports live and how to run smoke vs regression.
+- **AI Response Summary:** Completed runnable README commands and Part A setup summary sections 8–10; linked execution summary evidence.
+- **Debugging Outcome:** Documentation-only pass — no code changes required beyond docs for Step 10.

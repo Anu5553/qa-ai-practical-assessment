@@ -8,9 +8,11 @@ alwaysApply: true
 
 - Application Under Test: https://practicesoftwaretesting.com/
 - API Documentation: https://api.practicesoftwaretesting.com/api/documentation
-- Framework: Playwright (Prism Framework)
+- Framework: Playwright (Prism Framework) under PrismStructure/
 - Test scope: Manual (CSV), UI automation, API automation
 - Tags: @Smoke, @Regression
 - Max 5-8 test cases per type (manual, UI, API)
-- Invoice generation requires pressing confirm button twice
+- Invoice generation requires pressing confirm button twice (UI); API uses /payment/check then /invoices
 - Follow iterative development with incremental git commits
+- Do not invent folders outside the assignment structure
+- Do not commit secrets, tokens, or real credentials
