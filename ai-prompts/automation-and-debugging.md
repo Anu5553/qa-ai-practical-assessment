@@ -38,6 +38,14 @@
 
 ## Entry 5
 
-- **Prompt:** _To be added when implementing API Regression (Step 9)._
+- **Prompt:** Implement API Regression TC-API-07..08: invalid login 401, invoice without token 401, invoice with invalid cart 404. Then run full @Smoke|@Regression suite.
+- **AI Response Summary:** Implemented `02_regressionAPITest.spec.js`; added `notFoundStatus` to common status codes; recorded execution summary under `execution-reports/`.
+- **Debugging Outcome:** Negatives matched live API (`Unauthorized` / `Requested item not found`). Full suite: 16 passed.
+
+---
+
+## Entry 6
+
+- **Prompt:** _To be added in documentation phase (Step 10)._
 - **AI Response Summary:** _To be added._
 - **Debugging Outcome:** _To be added._

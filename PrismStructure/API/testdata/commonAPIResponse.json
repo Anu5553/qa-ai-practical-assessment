@@ -2,5 +2,6 @@
   "createdStatus": 201,
   "okStatus": 200,
   "unauthorizedStatus": 401,
-  "unprocessableStatus": 422
+  "unprocessableStatus": 422,
+  "notFoundStatus": 404
 }
