@@ -112,8 +112,7 @@ _To be completed as cases and scripts are produced._
 
 ### 7. How you use AI for test data generation, environment assumptions, and API payloads
 
-_To be completed in Step 4._
-
+Use short iterative prompts: (1) unique registration data + invalid email set, (2) COD invoice payload — fixed billing/COD fields vs dynamic `cart_id`/token, (3) environment base URLs and “do not commit secrets,” (4) in-stock product selection and empty-cart precondition. Validate payloads against the assignment invoice example. Runtime data: unique email per run; product id from live catalog; bearer token and `cart_id` from prior API steps — never committed. Prompt history: `ai-prompts/test-data.md`.
 ### 8. How you use AI for debugging failing tests and interpreting logs
 
 _To be completed during automation execution._
