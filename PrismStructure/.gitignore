@@ -1,5 +1,6 @@
 node_modules/
-execution-reports/
+execution-reports/html-report/
+execution-reports/test-output/
 test-results/
 playwright-report/
 blob-report/
