@@ -100,7 +100,7 @@ Use AI to propose a small Core matrix (Manual / UI / API × Smoke / Regression),
 
 ### 4. How you use AI for manual test case design (functional, edge, negative, non-functional)
 
-_To be completed in Step 3._
+Prompt iteratively: first Smoke happy-path cases for AC1/AC2, then Regression negatives/edge only, then ID mapping to UI/API automation. Review each batch against scope (max 8), double-confirm invoice rule, and COD-only checkout. Final manual suite lives in `FunctionalTestCase.csv` (TC-M-01..08: 4 @Smoke, 4 @Regression — positive, negative, edge). Prompt history: `ai-prompts/test-design.md`.
 
 ### 5. How you use AI for automation design (framework choice, structure, data, reusable utilities)
 
