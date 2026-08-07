@@ -1,0 +1,25 @@
+{
+  "name": "prismstructure-toolshop-playwright",
+  "version": "1.0.0",
+  "description": "Prism Playwright structure for Practice Software Testing Toolshop (UI + API)",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:smoke": "npx playwright test --grep @Smoke",
+    "test:regression": "npx playwright test --grep @Regression",
+    "test:ui:smoke": "npx playwright test \"tests/UI Test\" --grep @Smoke",
+    "test:ui:regression": "npx playwright test \"tests/UI Test\" --grep @Regression",
+    "test:api:smoke": "npx playwright test \"tests/API Test\" --grep @Smoke",
+    "test:api:regression": "npx playwright test \"tests/API Test\" --grep @Regression",
+    "report": "npx playwright show-report execution-reports/html-report"
+  },
+  "keywords": ["playwright", "prism", "toolshop", "qa"],
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.6.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "dotenv": "^16.4.5"
+  }
+}

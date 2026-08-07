@@ -104,7 +104,7 @@ Prompt iteratively: first Smoke happy-path cases for AC1/AC2, then Regression ne
 
 ### 5. How you use AI for automation design (framework choice, structure, data, reusable utilities)
 
-_To be completed in automation phase._
+Chose Playwright Prism-style layout under `PrismStructure/` (UI pageobjects + POManager, API pageobjects + `apiHelper`, `tests/UI Test`, `tests/API Test`, `execution-reports`). Prompted for scaffold first (folders, stubs, `@Smoke`/`@Regression` IDs), then implement suites iteratively. Shared data: `UI/resources/data/testData.json`, assignment COD billing on `invoiceApi`, unique users via `createDynamicData`. Prompt history: `ai-prompts/automation-and-debugging.md`.
 
 ### 6. How you validate and refine AI-generated test cases and scripts
 

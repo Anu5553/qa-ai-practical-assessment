@@ -1,0 +1,6 @@
+{
+  "positiveStatus": 200,
+  "createdStatus": 201,
+  "unauthorizedStatus": 401,
+  "unprocessableStatus": 422
+}
