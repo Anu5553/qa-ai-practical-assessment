@@ -1,0 +1,16 @@
+---
+description: QA AI Practical Assessment rules for PracticeSoftwareTesting Toolshop
+globs:
+alwaysApply: true
+---
+
+# QA Assessment Context
+
+- Application Under Test: https://practicesoftwaretesting.com/
+- API Documentation: https://api.practicesoftwaretesting.com/api/documentation
+- Framework: Playwright (Prism Framework)
+- Test scope: Manual (CSV), UI automation, API automation
+- Tags: @Smoke, @Regression
+- Max 5-8 test cases per type (manual, UI, API)
+- Invoice generation requires pressing confirm button twice
+- Follow iterative development with incremental git commits
