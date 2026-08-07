@@ -8,12 +8,17 @@ class cartPage {
     this.proceedStep2 = page.locator('[data-test="proceed-2"]');
     this.proceedStep3 = page.locator('[data-test="proceed-3"]');
     this.productRows = page.locator("table tbody tr");
+    this.emptyCartMessage = page.getByText(/cart is empty|nothing to display/i);
   }
 
   async openCart() {
     await this.cartNav.click();
     await this.page.waitForURL("**/checkout**", { timeout: 15000 });
     await this.proceedStep1.waitFor({ state: "visible", timeout: 20000 });
+  }
+
+  async openCheckoutPage() {
+    await this.page.goto("/checkout");
   }
 
   async updateFirstLineQuantity(qty) {

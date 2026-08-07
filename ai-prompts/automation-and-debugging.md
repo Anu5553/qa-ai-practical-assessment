@@ -22,6 +22,14 @@
 
 ## Entry 3
 
-- **Prompt:** _To be added when implementing UI Regression (Step 7)._
+- **Prompt:** Implement UI Regression TC-UI-06..08 only: invalid login error, empty cart cannot checkout, profile matches registered user. Use existing page objects.
+- **AI Response Summary:** Added `loginExpectingError`, empty-checkout helpers, profile field waits; implemented `02_regressionUITest.spec.js`.
+- **Debugging Outcome:** TC-UI-06/08 passed first run. TC-UI-07 empty-message text was flaky on blank cart step; asserted no cart badge, hidden proceed/finish, and no payment success instead. All 3 Regression UI tests passed.
+
+---
+
+## Entry 4
+
+- **Prompt:** _To be added when implementing API Smoke (Step 8)._
 - **AI Response Summary:** _To be added._
 - **Debugging Outcome:** _To be added._

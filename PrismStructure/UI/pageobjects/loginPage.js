@@ -6,6 +6,7 @@ class loginPage {
     this.loginButton = page.locator('[data-test="login-submit"]');
     this.loginError = page.locator('[data-test="login-error"]');
     this.navMenu = page.locator('[data-test="nav-menu"]');
+    this.navSignIn = page.locator('[data-test="nav-sign-in"]');
   }
 
   async goto() {
@@ -17,6 +18,13 @@ class loginPage {
     await this.passwordInput.fill(password);
     await this.loginButton.click();
     await this.navMenu.waitFor({ state: "visible", timeout: 20000 });
+  }
+
+  async loginExpectingError(email, password) {
+    await this.emailInput.fill(email);
+    await this.passwordInput.fill(password);
+    await this.loginButton.click();
+    await this.loginError.waitFor({ state: "visible", timeout: 15000 });
   }
 }
 
